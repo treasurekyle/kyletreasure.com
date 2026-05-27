@@ -225,14 +225,15 @@
   .hero-meta {
     margin-top: 2rem;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem 1.5rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0 0.75rem;
     font-size: 0.85rem;
     color: var(--muted);
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
-  .hero-meta span { display: inline-flex; align-items: center; gap: 0.5rem; }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 0.75rem; white-space: nowrap; }
   .hero-meta span::before {
     content: "";
     width: 4px; height: 4px;
