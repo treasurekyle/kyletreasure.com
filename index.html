@@ -604,6 +604,27 @@
   }
   .gallery.wide a { aspect-ratio: 4/3; }
 
+  /* video grid */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .video-embed {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--ink);
+  }
+  .video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
   /* writing-specific cards */
   .writing-grid {
     display: grid;
@@ -937,6 +958,9 @@
         <span>Design</span>
         <span>Advocacy</span>
       </div>
+      <p class="hero-lede">
+        Results-driven communications pro with 10+ years across global tech and public policy — building content strategies that move audiences, scale teams, and align with business goals. Currently Digital Content Manager at <a href="https://inkhouse.com/" target="_blank" rel="noopener">Inkhouse PR</a>.
+      </p>
     </div>
     <div class="hero-right">
       <div class="portrait-wrap">
@@ -944,12 +968,6 @@
       </div>
       <div class="portrait-tag">Hi, I'm Kyle.</div>
     </div>
-  </div>
-
-  <div class="container">
-    <p class="hero-lede">
-      Results-driven communications pro with 7+ years across global tech and public policy — building content strategies that move audiences, scale teams, and align with business goals. Currently Digital Content Manager at <a href="https://inkhouse.com/" target="_blank" rel="noopener">Inkhouse</a> and founder of Treasure Communications.
-    </p>
   </div>
 
 </section>
@@ -960,12 +978,11 @@
     <div class="about-grid reveal">
       <div>
         <p class="eyebrow">About</p>
-        <h2 class="about-title">A long way from <em>a Wyoming farm</em> — and somehow, still rooted there.</h2>
+        <h2 class="about-title">A long way from <em>a Wyoming farm</em>, but still rooted there.</h2>
       </div>
       <div class="about-body">
-        <p>I started my career honing client relations and digital media skills at startups like Elevati and Adoption.com. From there, I made my way to Sutherland Institute, a Salt Lake City think tank, where I worked my way up from intern to donor relations manager — implementing Salesforce and leading donor strategy.</p>
-        <p>Then came the U.S. Congress, where I directed communications for the Joint Economic Committee through the 116th and 117th Congresses. After D.C., I followed my gut back to the Intermountain West, founded Treasure Communications, and joined Inkhouse PR as Digital Content Manager.</p>
-        <p>Now I lead organic social strategy for global tech clients, many with 20k+ employees. When I'm not strategizing or writing, you'll find me on nature walks, watching Netflix, or losing hours in used bookstores.</p>
+        <p>I started my career by honing my skills in client relations and digital media at startups like Elevati and Adoption.com. At Sutherland Institute, I advanced to donor relations manager, implementing Salesforce and managing donor interactions. My expertise then took me to the United States Congress, where I developed communication strategies for the Joint Economic Committee.</p>
+        <p>Now, as a Digital Content Manager at Inkhouse, I lead organic social strategy for global tech clients, complimenting and elevating their digital and PR strategies. When I'm not strategizing or writing, you'll find me on nature walks, watching Netflix, or losing hours in used bookstores.</p>
       </div>
     </div>
   </div>
@@ -983,16 +1000,16 @@
 
     <div class="tab-box" id="tab-box">
     <div class="tabs" id="tab-nav" role="tablist">
-      <button class="tab active" data-tab="digital" role="tab"><span class="tab-num">01 / Digital</span>Digital Content</button>
-      <button class="tab" data-tab="writing" role="tab"><span class="tab-num">02 / Writing</span>Writing</button>
-      <button class="tab" data-tab="design" role="tab"><span class="tab-num">03 / Design</span>Design</button>
-      <button class="tab" data-tab="advocacy" role="tab"><span class="tab-num">04 / Advocacy</span>Advocacy</button>
+      <button class="tab active" data-tab="digital" role="tab">01 Digital Content</button>
+      <button class="tab" data-tab="writing" role="tab">02 Writing</button>
+      <button class="tab" data-tab="design" role="tab">03 Design</button>
+      <button class="tab" data-tab="advocacy" role="tab">04 Advocacy</button>
     </div>
 
     <!-- ===== DIGITAL ===== -->
     <div class="panel active" id="panel-digital" role="tabpanel">
       <p class="panel-intro">
-        Digital content has always been the <em>speciality</em> — strategy, social, paid and organic, scaled across teams of 4–8 building 200–300 pieces of content per month for clients from government to global tech.
+        Digital content has always been the <em>speciality</em> — strategy, social, paid and organic, scaled across teams building 200–300 pieces of content per month for clients from government to global tech.
       </p>
 
       <div class="roles">
@@ -1002,7 +1019,7 @@
             <p class="role-org">Inkhouse PR</p>
             <h3>Digital Content Manager</h3>
             <p class="title">Apr 2022 – present · Salt Lake City</p>
-            <p>Lead organic social strategy and oversee content development for global pre- and post-IPO tech clients (Dialpad, Databricks, Samsara). Manage 4 teams of 4–8 junior team members, delivering 200–300 pieces of content per month. Train AI tooling to increase team efficiency and oversee client CMS for accurate, timely cross-platform delivery.</p>
+            <p>I focus on paid and organic social media strategy and oversee social content development for global tech industry clients. This requires regularly communicating campaign progress, updates, and optimization as well as working to generate quality content to maximize performance. Training AI tooling to increase team efficiency and oversee client CMS for accurate, timely cross-platform delivery. In addition, provided constructive feedback to junior team members as a mentor.</p>
             <a class="role-link" href="https://inkhouse.com/" target="_blank" rel="noopener">Inkhouse →</a>
           </div>
         </article>
@@ -1013,7 +1030,7 @@
             <p class="role-org">Treasure Communications LLC</p>
             <h3>Founder</h3>
             <p class="title">Jun 2021 – Dec 2024 · Salt Lake City</p>
-            <p>Provided Utah Tech Leads, Silicon Slopes, The Beehive, and Becky Edwards for U.S. Senate with social media strategy, branding, email marketing, research, SEO, messaging, web/print design, and more. Built and maintained tone and voice across digital, print, and social platforms.</p>
+            <p>Provided strategic communications consulting and advisory services to a diverse client portfolio including Utah Tech Leads, Silicon Slopes, The Beehive, and Becky Edwards for U.S. Senate, where I served as Communications Director. Delivered integrated solutions spanning social media management, email marketing, media outreach, messaging strategy, branding, and design.</p>
           </div>
         </article>
 
@@ -1023,7 +1040,7 @@
             <p class="role-org">U.S. Congress, Joint Economic Committee</p>
             <h3>Communications Director</h3>
             <p class="title">Apr 2019 – Jun 2021 · Washington D.C.</p>
-            <p>Directed all communications strategy and execution for the JEC through the 116th and 117th Congresses. Developed and implemented strategies across social, graphic design, video editing, animation, and UX — resulting in a 60% increase in web traffic and social engagement.</p>
+            <p>Directed all communications strategy and execution for the Joint Economic Committee during the 116th and 117th Congresses. Developed and implemented integrated campaigns to expand the Committee's outreach and influence, spanning social media strategy and execution, graphic design, video editing, animation, web design, and editorial writing.</p>
             <a class="role-link" href="https://www.jec.senate.gov/public/" target="_blank" rel="noopener">JEC →</a>
           </div>
         </article>
@@ -1036,11 +1053,11 @@
         <div class="feature-body">
           <div>
             <h4>Planning</h4>
-            <p>Once the video team sent over a storyboard, we brainstormed a full communications plan to promote Dialpad's first Super Bowl commercial — integrating PR and digital across social, influencer relations, and media. Objective: maximize reach and engagement before, during, and after launch.</p>
+            <p>I led this digital content plan from idea to execution. Once the video team sent over a storyboard, we brainstormed a full communications plan to promote Dialpad's first Super Bowl commercial — integrating PR and digital across social, influencer relations, and media. Objective: maximize reach and engagement before, during, and after launch.</p>
           </div>
           <div>
             <h4>Execution</h4>
-            <p>We teased the spot with social posts to stir curiosity, paired with a press release. Influencers amplified it on social. Day-of and post-launch activations stretched the investment's reach as far as it could go. Metrics tracked weekly, adjustments made on the fly.</p>
+            <p>We teased the spot with social posts to stir curiosity, paired with a press release. Influencers amplified it on social. Day-of and post-launch activations stretched the investment's reach as far as it could go. We tracked metrics weekly and made strategy adjustments as necessary.</p>
           </div>
         </div>
         <div class="feature-gallery">
@@ -1058,7 +1075,7 @@
           <h3>Social content, day to day</h3>
           <span class="count">A sampler</span>
         </div>
-        <p class="lede">Not every campaign is a Super Bowl spot. Same care, smaller stage — content built around audience, channel, and the metric that actually matters.</p>
+        <p class="lede">Not every campaign is a Super Bowl spot. Same care, smaller stage — content built around audience, channel, and building business momentum.</p>
         <div class="gallery">
           <a href="images/digital-sample-1.png" class="lightbox-link"><img src="images/digital-sample-1.png" alt="Social media post" loading="lazy"/></a>
           <a href="images/digital-sample-2.png" class="lightbox-link"><img src="images/digital-sample-2.png" alt="Social media post" loading="lazy"/></a>
@@ -1066,7 +1083,7 @@
           <a href="images/digital-hearing.webp" class="lightbox-link"><img src="images/digital-hearing.webp" alt="Congressional hearing post" loading="lazy"/></a>
           <a href="images/digital-quote.webp" class="lightbox-link"><img src="images/digital-quote.webp" alt="Pull quote graphic" loading="lazy"/></a>
           <a href="images/digital-state-emp.webp" class="lightbox-link"><img src="images/digital-state-emp.webp" alt="State employment graphic" loading="lazy"/></a>
-          <a href="images/digital-hiring.png" class="lightbox-link"><img src="images/digital-hiring.png" alt="Hiring post" loading="lazy"/></a>
+          <a href="images/venafi-meme.png" class="lightbox-link"><img src="images/venafi-meme.png" alt="Venafi social post" loading="lazy"/></a>
           <a href="images/digital-youtube.png" class="lightbox-link"><img src="images/digital-youtube.png" alt="YouTube template" loading="lazy"/></a>
         </div>
       </div>
@@ -1077,26 +1094,34 @@
           <h3>Email &amp; LinkedIn newsletters</h3>
           <span class="count">Direct lines to the audience</span>
         </div>
-        <p class="lede">Newsletters build relationships search and social can't — direct, repeated, and on the audience's terms. Some samples below.</p>
+        <p class="lede">Newsletters build quality digital relationships through direct, consistent delivery straight to the inbox. Some samples below.</p>
         <div class="gallery wide">
           <a href="images/newsletter-1.png" class="lightbox-link"><img src="images/newsletter-1.png" alt="Newsletter design" loading="lazy"/></a>
           <a href="images/newsletter-2.webp" class="lightbox-link"><img src="images/newsletter-2.webp" alt="Newsletter design" loading="lazy"/></a>
+          <a href="images/venafi-newsletter.png" class="lightbox-link"><img src="images/venafi-newsletter.png" alt="Venafi newsletter" loading="lazy"/></a>
         </div>
       </div>
 
-      <!-- WEB -->
+      <!-- VIDEO -->
       <div class="subsection">
         <div class="subsection-head">
-          <h3>Web content &amp; design</h3>
-          <span class="count">Hierarchy first</span>
+          <h3>Video production &amp; animation</h3>
+          <span class="count">Full-stack content</span>
         </div>
-        <p class="lede">Start with what you want people to do. Build the page around that. Simplicity and clear hierarchy outperform decoration every time.</p>
-        <div class="gallery wide">
-          <a href="images/web-design-1.png" class="lightbox-link"><img src="images/web-design-1.png" alt="Web design sample" loading="lazy"/></a>
-          <a href="images/web-design-2.webp" class="lightbox-link"><img src="images/web-design-2.webp" alt="Web design sample" loading="lazy"/></a>
-          <a href="images/web-design-3.webp" class="lightbox-link"><img src="images/web-design-3.webp" alt="Web design sample" loading="lazy"/></a>
-          <a href="images/web-design-4.webp" class="lightbox-link"><img src="images/web-design-4.webp" alt="Web design sample" loading="lazy"/></a>
-          <a href="images/web-design-5.webp" class="lightbox-link"><img src="images/web-design-5.webp" alt="Web design sample" loading="lazy"/></a>
+        <p class="lede">Video and animation are part of my full-stack approach to content. I have produced and animated in-house, which means faster turnarounds and tighter alignment with the broader strategy.</p>
+        <div class="video-grid">
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/lM5MXKvx3Fc" title="Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/39OJ6Bz7SGQ" title="Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/9Fk29-ahvtI" title="Video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/Us3nf_uPwvc" title="Video 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
         </div>
       </div>
       <div class="tab-back-wrap">
