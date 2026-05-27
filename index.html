@@ -280,43 +280,6 @@
     padding-bottom: 1px;
   }
 
-  /* marquee of credentials */
-  .marquee {
-    margin-top: clamp(3rem, 6vw, 5rem);
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-    padding: 1.25rem 0;
-    overflow: hidden;
-    position: relative;
-    background: var(--paper);
-  }
-  .marquee-track {
-    display: flex;
-    gap: 3rem;
-    animation: scroll 45s linear infinite;
-    white-space: nowrap;
-    will-change: transform;
-  }
-  .marquee-track span {
-    font-family: var(--display);
-    font-style: italic;
-    font-weight: 350;
-    font-size: 1.3rem;
-    color: var(--ink-soft);
-    display: inline-flex;
-    align-items: center;
-    gap: 3rem;
-  }
-  .marquee-track span::after {
-    content: "✦";
-    color: var(--accent);
-    font-style: normal;
-    font-size: 0.85rem;
-  }
-  @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
 
   /* ===== ABOUT ===== */
   .about {
@@ -888,12 +851,6 @@
     </p>
   </div>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Dialpad</span><span>Databricks</span><span>Samsara</span><span>Inkhouse PR</span><span>U.S. Congress</span><span>Silicon Slopes</span><span>Utah Tech Leads</span><span>Sutherland Institute</span><span>The Hill</span><span>Becky Edwards for U.S. Senate</span>
-      <span>Dialpad</span><span>Databricks</span><span>Samsara</span><span>Inkhouse PR</span><span>U.S. Congress</span><span>Silicon Slopes</span><span>Utah Tech Leads</span><span>Sutherland Institute</span><span>The Hill</span><span>Becky Edwards for U.S. Senate</span>
-    </div>
-  </div>
 </section>
 
 <!-- ABOUT -->
