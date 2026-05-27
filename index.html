@@ -847,6 +847,59 @@
 
   /* utility */
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+  /* ===== LIGHTBOX ===== */
+  .lb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(16, 14, 13, 0.92);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    animation: lbFadeIn 0.2s ease;
+  }
+  .lb-overlay.open { display: flex; }
+  @keyframes lbFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .lb-img {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.5);
+    cursor: default;
+    animation: lbSlideIn 0.25s ease;
+  }
+  @keyframes lbSlideIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .lb-close {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    line-height: 1;
+  }
+  .lb-close:hover { background: rgba(255,255,255,0.25); }
+  .lightbox-link { cursor: zoom-in; }
 </style>
 </head>
 <body>
@@ -989,10 +1042,10 @@
           </div>
         </div>
         <div class="feature-gallery">
-          <a href="images/dialpad-1.png" target="_blank"><img src="images/dialpad-1.png" alt="Dialpad campaign asset" /></a>
-          <a href="images/dialpad-2.png" target="_blank"><img src="images/dialpad-2.png" alt="Dialpad campaign asset" /></a>
-          <a href="images/dialpad-3.png" target="_blank"><img src="images/dialpad-3.png" alt="Dialpad campaign asset" /></a>
-          <a href="images/dialpad-4.png" target="_blank"><img src="images/dialpad-4.png" alt="Dialpad landing page" /></a>
+          <a href="images/dialpad-1.png" class="lightbox-link"><img src="images/dialpad-1.png" alt="Dialpad campaign asset" /></a>
+          <a href="images/dialpad-2.png" class="lightbox-link"><img src="images/dialpad-2.png" alt="Dialpad campaign asset" /></a>
+          <a href="images/dialpad-3.png" class="lightbox-link"><img src="images/dialpad-3.png" alt="Dialpad campaign asset" /></a>
+          <a href="images/dialpad-4.png" class="lightbox-link"><img src="images/dialpad-4.png" alt="Dialpad landing page" /></a>
         </div>
         <p style="margin-top:1.5rem;"><a class="role-link" href="https://www.dialpad.com/the-good-ai-super-bowl/" target="_blank" rel="noopener">See the campaign →</a></p>
       </div>
@@ -1005,14 +1058,14 @@
         </div>
         <p class="lede">Not every campaign is a Super Bowl spot. Same care, smaller stage — content built around audience, channel, and the metric that actually matters.</p>
         <div class="gallery">
-          <a href="images/digital-sample-1.png" target="_blank"><img src="images/digital-sample-1.png" alt="Social media post" loading="lazy"/></a>
-          <a href="images/digital-sample-2.png" target="_blank"><img src="images/digital-sample-2.png" alt="Social media post" loading="lazy"/></a>
-          <a href="images/digital-gdp.webp" target="_blank"><img src="images/digital-gdp.webp" alt="GDP graphic" loading="lazy"/></a>
-          <a href="images/digital-hearing.webp" target="_blank"><img src="images/digital-hearing.webp" alt="Congressional hearing post" loading="lazy"/></a>
-          <a href="images/digital-quote.webp" target="_blank"><img src="images/digital-quote.webp" alt="Pull quote graphic" loading="lazy"/></a>
-          <a href="images/digital-state-emp.webp" target="_blank"><img src="images/digital-state-emp.webp" alt="State employment graphic" loading="lazy"/></a>
-          <a href="images/digital-hiring.png" target="_blank"><img src="images/digital-hiring.png" alt="Hiring post" loading="lazy"/></a>
-          <a href="images/digital-youtube.png" target="_blank"><img src="images/digital-youtube.png" alt="YouTube template" loading="lazy"/></a>
+          <a href="images/digital-sample-1.png" class="lightbox-link"><img src="images/digital-sample-1.png" alt="Social media post" loading="lazy"/></a>
+          <a href="images/digital-sample-2.png" class="lightbox-link"><img src="images/digital-sample-2.png" alt="Social media post" loading="lazy"/></a>
+          <a href="images/digital-gdp.webp" class="lightbox-link"><img src="images/digital-gdp.webp" alt="GDP graphic" loading="lazy"/></a>
+          <a href="images/digital-hearing.webp" class="lightbox-link"><img src="images/digital-hearing.webp" alt="Congressional hearing post" loading="lazy"/></a>
+          <a href="images/digital-quote.webp" class="lightbox-link"><img src="images/digital-quote.webp" alt="Pull quote graphic" loading="lazy"/></a>
+          <a href="images/digital-state-emp.webp" class="lightbox-link"><img src="images/digital-state-emp.webp" alt="State employment graphic" loading="lazy"/></a>
+          <a href="images/digital-hiring.png" class="lightbox-link"><img src="images/digital-hiring.png" alt="Hiring post" loading="lazy"/></a>
+          <a href="images/digital-youtube.png" class="lightbox-link"><img src="images/digital-youtube.png" alt="YouTube template" loading="lazy"/></a>
         </div>
       </div>
 
@@ -1024,8 +1077,8 @@
         </div>
         <p class="lede">Newsletters build relationships search and social can't — direct, repeated, and on the audience's terms. Some samples below.</p>
         <div class="gallery wide">
-          <a href="images/newsletter-1.png" target="_blank"><img src="images/newsletter-1.png" alt="Newsletter design" loading="lazy"/></a>
-          <a href="images/newsletter-2.webp" target="_blank"><img src="images/newsletter-2.webp" alt="Newsletter design" loading="lazy"/></a>
+          <a href="images/newsletter-1.png" class="lightbox-link"><img src="images/newsletter-1.png" alt="Newsletter design" loading="lazy"/></a>
+          <a href="images/newsletter-2.webp" class="lightbox-link"><img src="images/newsletter-2.webp" alt="Newsletter design" loading="lazy"/></a>
         </div>
       </div>
 
@@ -1037,11 +1090,11 @@
         </div>
         <p class="lede">Start with what you want people to do. Build the page around that. Simplicity and clear hierarchy outperform decoration every time.</p>
         <div class="gallery wide">
-          <a href="images/web-design-1.png" target="_blank"><img src="images/web-design-1.png" alt="Web design sample" loading="lazy"/></a>
-          <a href="images/web-design-2.webp" target="_blank"><img src="images/web-design-2.webp" alt="Web design sample" loading="lazy"/></a>
-          <a href="images/web-design-3.webp" target="_blank"><img src="images/web-design-3.webp" alt="Web design sample" loading="lazy"/></a>
-          <a href="images/web-design-4.webp" target="_blank"><img src="images/web-design-4.webp" alt="Web design sample" loading="lazy"/></a>
-          <a href="images/web-design-5.webp" target="_blank"><img src="images/web-design-5.webp" alt="Web design sample" loading="lazy"/></a>
+          <a href="images/web-design-1.png" class="lightbox-link"><img src="images/web-design-1.png" alt="Web design sample" loading="lazy"/></a>
+          <a href="images/web-design-2.webp" class="lightbox-link"><img src="images/web-design-2.webp" alt="Web design sample" loading="lazy"/></a>
+          <a href="images/web-design-3.webp" class="lightbox-link"><img src="images/web-design-3.webp" alt="Web design sample" loading="lazy"/></a>
+          <a href="images/web-design-4.webp" class="lightbox-link"><img src="images/web-design-4.webp" alt="Web design sample" loading="lazy"/></a>
+          <a href="images/web-design-5.webp" class="lightbox-link"><img src="images/web-design-5.webp" alt="Web design sample" loading="lazy"/></a>
         </div>
       </div>
       <div class="tab-back-wrap">
@@ -1125,14 +1178,14 @@
           <span class="count">Social, graphic, motion-ready</span>
         </div>
         <div class="gallery">
-          <a href="images/digital-hiring.png" target="_blank"><img src="images/digital-hiring.png" alt="Hiring graphic" loading="lazy"/></a>
-          <a href="images/design-painpoint-1.png" target="_blank"><img src="images/design-painpoint-1.png" alt="Pain point graphic" loading="lazy"/></a>
-          <a href="images/digital-gdp.webp" target="_blank"><img src="images/digital-gdp.webp" alt="GDP graphic" loading="lazy"/></a>
-          <a href="images/digital-quote.webp" target="_blank"><img src="images/digital-quote.webp" alt="Pull quote design" loading="lazy"/></a>
-          <a href="images/digital-youtube.png" target="_blank"><img src="images/digital-youtube.png" alt="YouTube thumbnail template" loading="lazy"/></a>
-          <a href="images/digital-hearing.webp" target="_blank"><img src="images/digital-hearing.webp" alt="Hearing graphic" loading="lazy"/></a>
-          <a href="images/digital-state-emp.webp" target="_blank"><img src="images/digital-state-emp.webp" alt="State employment mockup" loading="lazy"/></a>
-          <a href="images/design-endorsed.png" target="_blank"><img src="images/design-endorsed.png" alt="Endorsed candidate graphic" loading="lazy"/></a>
+          <a href="images/digital-hiring.png" class="lightbox-link"><img src="images/digital-hiring.png" alt="Hiring graphic" loading="lazy"/></a>
+          <a href="images/design-painpoint-1.png" class="lightbox-link"><img src="images/design-painpoint-1.png" alt="Pain point graphic" loading="lazy"/></a>
+          <a href="images/digital-gdp.webp" class="lightbox-link"><img src="images/digital-gdp.webp" alt="GDP graphic" loading="lazy"/></a>
+          <a href="images/digital-quote.webp" class="lightbox-link"><img src="images/digital-quote.webp" alt="Pull quote design" loading="lazy"/></a>
+          <a href="images/digital-youtube.png" class="lightbox-link"><img src="images/digital-youtube.png" alt="YouTube thumbnail template" loading="lazy"/></a>
+          <a href="images/digital-hearing.webp" class="lightbox-link"><img src="images/digital-hearing.webp" alt="Hearing graphic" loading="lazy"/></a>
+          <a href="images/digital-state-emp.webp" class="lightbox-link"><img src="images/digital-state-emp.webp" alt="State employment mockup" loading="lazy"/></a>
+          <a href="images/design-endorsed.png" class="lightbox-link"><img src="images/design-endorsed.png" alt="Endorsed candidate graphic" loading="lazy"/></a>
         </div>
       </div>
 
@@ -1143,12 +1196,12 @@
         </div>
         <p class="lede">Web design philosophy in one sentence: define what you want people to do, then build the page around that.</p>
         <div class="gallery wide">
-          <a href="images/web-design-1.png" target="_blank"><img src="images/web-design-1.png" alt="Web design" loading="lazy"/></a>
-          <a href="images/web-design-2.webp" target="_blank"><img src="images/web-design-2.webp" alt="Web design" loading="lazy"/></a>
-          <a href="images/web-design-3.webp" target="_blank"><img src="images/web-design-3.webp" alt="Web design" loading="lazy"/></a>
-          <a href="images/web-design-4.webp" target="_blank"><img src="images/web-design-4.webp" alt="Web design" loading="lazy"/></a>
-          <a href="images/web-design-5.webp" target="_blank"><img src="images/web-design-5.webp" alt="Web design" loading="lazy"/></a>
-          <a href="images/becky-edwards.png" target="_blank"><img src="images/becky-edwards.png" alt="Becky Edwards campaign site" loading="lazy"/></a>
+          <a href="images/web-design-1.png" class="lightbox-link"><img src="images/web-design-1.png" alt="Web design" loading="lazy"/></a>
+          <a href="images/web-design-2.webp" class="lightbox-link"><img src="images/web-design-2.webp" alt="Web design" loading="lazy"/></a>
+          <a href="images/web-design-3.webp" class="lightbox-link"><img src="images/web-design-3.webp" alt="Web design" loading="lazy"/></a>
+          <a href="images/web-design-4.webp" class="lightbox-link"><img src="images/web-design-4.webp" alt="Web design" loading="lazy"/></a>
+          <a href="images/web-design-5.webp" class="lightbox-link"><img src="images/web-design-5.webp" alt="Web design" loading="lazy"/></a>
+          <a href="images/becky-edwards.png" class="lightbox-link"><img src="images/becky-edwards.png" alt="Becky Edwards campaign site" loading="lazy"/></a>
         </div>
       </div>
       <div class="tab-back-wrap">
@@ -1438,6 +1491,43 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<!-- LIGHTBOX -->
+<div id="lb-overlay" class="lb-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lb-close" aria-label="Close image">✕</button>
+  <img class="lb-img" id="lb-img" src="" alt="" />
+</div>
+
+<script>
+  const lbOverlay = document.getElementById('lb-overlay');
+  const lbImg     = document.getElementById('lb-img');
+  const lbClose   = document.getElementById('lb-close');
+
+  function openLb(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lbOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLb() {
+    lbOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  document.querySelectorAll('a.lightbox-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const alt = link.querySelector('img')?.alt || '';
+      openLb(link.href, alt);
+    });
+  });
+
+  lbClose.addEventListener('click', closeLb);
+  lbOverlay.addEventListener('click', e => { if (e.target === lbOverlay) closeLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
 </script>
 
 </body>
