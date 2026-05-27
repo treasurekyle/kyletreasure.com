@@ -379,6 +379,52 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  /* tab lightbox */
+  .tab-box {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  .tab-box .tabs {
+    border-top: none;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .tab-box .panel {
+    padding: clamp(2rem, 4vw, 3rem);
+  }
+  .tab-back-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0 0.5rem;
+    margin-top: clamp(2rem, 4vw, 3rem);
+    border-top: 1px solid var(--rule);
+  }
+  .tab-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .tab-back-btn:hover {
+    background: var(--bg-deep);
+    border-color: var(--accent-soft);
+    color: var(--accent);
+  }
+
   /* role / experience cards */
   .panel-intro {
     max-width: 60ch;
@@ -880,7 +926,8 @@
       </div>
     </div>
 
-    <div class="tabs" role="tablist">
+    <div class="tab-box" id="tab-box">
+    <div class="tabs" id="tab-nav" role="tablist">
       <button class="tab active" data-tab="digital" role="tab"><span class="tab-num">01 / Digital</span>Digital Content</button>
       <button class="tab" data-tab="writing" role="tab"><span class="tab-num">02 / Writing</span>Writing</button>
       <button class="tab" data-tab="design" role="tab"><span class="tab-num">03 / Design</span>Design</button>
@@ -997,6 +1044,9 @@
           <a href="images/web-design-5.webp" target="_blank"><img src="images/web-design-5.webp" alt="Web design sample" loading="lazy"/></a>
         </div>
       </div>
+      <div class="tab-back-wrap">
+        <button class="tab-back-btn" onclick="document.getElementById('tab-nav').scrollIntoView({behavior:'smooth',block:'start'})">↑ Back to tabs</button>
+      </div>
     </div>
 
     <!-- ===== WRITING ===== -->
@@ -1058,6 +1108,9 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         </a>
       </div>
+      <div class="tab-back-wrap">
+        <button class="tab-back-btn" onclick="document.getElementById('tab-nav').scrollIntoView({behavior:'smooth',block:'start'})">↑ Back to tabs</button>
+      </div>
     </div>
 
     <!-- ===== DESIGN ===== -->
@@ -1097,6 +1150,9 @@
           <a href="images/web-design-5.webp" target="_blank"><img src="images/web-design-5.webp" alt="Web design" loading="lazy"/></a>
           <a href="images/becky-edwards.png" target="_blank"><img src="images/becky-edwards.png" alt="Becky Edwards campaign site" loading="lazy"/></a>
         </div>
+      </div>
+      <div class="tab-back-wrap">
+        <button class="tab-back-btn" onclick="document.getElementById('tab-nav').scrollIntoView({behavior:'smooth',block:'start'})">↑ Back to tabs</button>
       </div>
     </div>
 
@@ -1249,7 +1305,12 @@
           </article>
         </div>
       </div>
+      <div class="tab-back-wrap">
+        <button class="tab-back-btn" onclick="document.getElementById('tab-nav').scrollIntoView({behavior:'smooth',block:'start'})">↑ Back to tabs</button>
+      </div>
     </div>
+
+    </div><!-- /.tab-box -->
 
   </div>
 </section>
