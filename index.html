@@ -607,8 +607,11 @@
   /* video grid */
   .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .video-grid { grid-template-columns: repeat(4, 1fr); }
   }
   .video-embed {
     position: relative;
@@ -1162,19 +1165,10 @@
             <p class="org">Substack · Personal Essay</p>
             <h4>My First Pumpkin Spice Latte</h4>
             <p>Personal essays on whatever's worth slowing down for — culture, politics, growing up. Published on Substack.</p>
-            <a class="read" href="https://kyletreasure.substack.com/" target="_blank" rel="noopener">Read on Substack →</a>
+            <a class="read" href="https://shortmuse.substack.com/p/my-first-pumpkin-spice-latte" target="_blank" rel="noopener">Read on Substack →</a>
           </div>
         </article>
 
-        <article class="writing-card">
-          <div class="writing-card-img"><img src="images/newsletter-1.png" alt="Social and newsletter writing" loading="lazy"/></div>
-          <div class="writing-card-body">
-            <p class="org">Inkhouse · Social &amp; Newsletter</p>
-            <h4>Social posts and LinkedIn newsletters for global tech clients</h4>
-            <p>Day-in, day-out copywriting across LinkedIn, X, and email — ghostwritten for executives, voiced for brands, calibrated for each channel.</p>
-            <a class="read" href="Kyle_Treasure_Writing_Samples.pdf" target="_blank">Download samples →</a>
-          </div>
-        </article>
       </div>
 
       <div class="subsection" style="margin-top: 3.5rem;">
