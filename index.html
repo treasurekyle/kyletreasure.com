@@ -555,19 +555,12 @@
   .feature-gallery a { display: block; overflow: hidden; border-radius: 3px; }
   .feature-gallery a:hover img { transform: scale(1.03); }
 
-  /* influencer case study layout */
-  .influencer-case {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-    align-items: start;
-    margin-bottom: 2rem;
-  }
-  .influencer-exec { grid-row: 1 / 3; }
+  /* influencer case study images */
   .influencer-imgs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
+    margin-top: 1.25rem;
   }
   .influencer-imgs a {
     display: block;
@@ -578,10 +571,6 @@
   }
   .influencer-imgs img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
   .influencer-imgs a:hover img { transform: scale(1.03); }
-  @media (max-width: 720px) {
-    .influencer-case { grid-template-columns: 1fr; }
-    .influencer-exec { grid-row: auto; }
-  }
 
   /* subsections */
   .subsection { margin: clamp(3rem, 6vw, 5rem) 0; }
@@ -1103,20 +1092,20 @@
       <div class="feature">
         <p class="feature-label">Case study · Entrust &amp; Xerox</p>
         <h3>Influencer partnerships that delivered <em>engagement</em> for enterprise tech brands.</h3>
-        <div class="influencer-case">
+        <div class="feature-body">
           <div>
             <h4>Planning</h4>
             <p>I led influencer strategy for two enterprise tech clients, Entrust and Xerox, each facing a shared challenge: reaching new audiences in spaces where traditional B2B marketing falls flat.</p>
-          </div>
-          <div class="influencer-exec">
-            <h4>Entrust — RSA Conference</h4>
+            <h4 style="margin-top:1.25rem;">Entrust — RSA Conference</h4>
             <p>We tapped Cybersecurity Girl to bridge enterprise cybersecurity with a digitally native audience, facilitating her on-site presence at Entrust's booth and producing a series of social videos and posts across her channels and Entrust's. The result: a significant rise in engagements and impressions over previous periods, plus meaningful exposure to a net-new audience.</p>
-            <h4 style="margin-top:1.25rem;">Xerox — Audience Shift</h4>
-            <p>We consulted on a partnership with TikTok creator Staples Baddie, whose niche office-supply content had built a loyal Gen Z following aligned with Xerox's category. Her TikTok featuring the brand's printer delivered organic exposure at a fraction of standard campaign costs — and marked a deliberate shift in Xerox's audience to keep pace with evolving demographics.</p>
           </div>
-          <div class="influencer-imgs">
-            <a href="images/IMG_1479.jpg" class="lightbox-link"><img src="images/IMG_1479.jpg" alt="Influencer campaign asset" /></a>
-            <a href="images/IMG_1480.jpg" class="lightbox-link"><img src="images/IMG_1480.jpg" alt="Influencer campaign asset" /></a>
+          <div>
+            <h4>Xerox — Audience Shift</h4>
+            <p>We consulted on a partnership with TikTok creator Staples Baddie, whose niche office-supply content had built a loyal Gen Z following aligned with Xerox's category. Her TikTok featuring the brand's printer delivered organic exposure at a fraction of standard campaign costs — and marked a deliberate shift in Xerox's audience to keep pace with evolving demographics.</p>
+            <div class="influencer-imgs">
+              <a href="images/IMG_1479.jpg" class="lightbox-link"><img src="images/IMG_1479.jpg" alt="Influencer campaign asset" /></a>
+              <a href="images/IMG_1480.jpg" class="lightbox-link"><img src="images/IMG_1480.jpg" alt="Influencer campaign asset" /></a>
+            </div>
           </div>
         </div>
       </div>
